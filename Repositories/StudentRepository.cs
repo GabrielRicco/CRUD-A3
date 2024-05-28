@@ -10,9 +10,8 @@ namespace CrudMongoApp.Repositories
     {
         private readonly IMongoCollection<Student> _students;
 
-        public StudentRepository(IMongoClient client, IOptions<MongoDBSettings> settings)
+        public StudentRepository(IMongoDatabase database)
         {
-            var database = client.GetDatabase(settings.Value.DatabaseName);
             _students = database.GetCollection<Student>("Students");
         }
 

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "GKC5LS6aeTX+uAe/9JFGC5QmJPFj2TfI1MXm3iqG+SE=",
+  "Source": "CrudMongoApp",
+  "BasePath": "_content/CrudMongoApp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
