@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using CrudMongoApp.Services;
 using Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CrudMongoApp.Controllers
 {
+    [Authorize(Roles = "admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class StudentsController : ControllerBase
