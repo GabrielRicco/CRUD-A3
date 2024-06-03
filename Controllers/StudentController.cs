@@ -54,7 +54,7 @@ namespace CrudMongoApp.Controllers
             student.Id = existingStudent.Id;
             await _studentService.UpdateAsync(id, student);
 
-            return NoContent();
+            return Ok("Estudante de id " + student.Id + " atualizado com sucesso!");
         }
 
         [HttpDelete("{id}")]
@@ -68,7 +68,7 @@ namespace CrudMongoApp.Controllers
 
             await _studentService.DeleteAsync(id);
 
-            return NoContent();
+            return Ok("Estudante de id " + student.Id + " deletado com sucesso!");
         }
     }
 }
