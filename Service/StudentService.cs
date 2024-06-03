@@ -23,6 +23,11 @@ namespace CrudMongoApp.Services
             return await _studentRepository.GetByIdAsync(id);
         }
 
+        public async Task<List<Student>> GetByCourseIdAsync(Guid courseId)
+        {
+            return await _studentRepository.GetAllByCourseId(courseId);
+        }
+
         public async Task CreateAsync(Student student)
         {
             await _studentRepository.CreateAsync(student);

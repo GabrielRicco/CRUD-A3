@@ -35,6 +35,17 @@ namespace CrudMongoApp.Controllers
             return Ok(student);
         }
 
+        [HttpGet("course/{courseId}")]
+        public async Task<ActionResult<Student>> GetByCourseId(Guid courseId)
+        {
+            var student = await _studentService.GetByCourseIdAsync(courseId);
+            if (student == null)
+            {
+                return NotFound();
+            }
+            return Ok(student);
+        }
+
         [HttpPost]
         public async Task<ActionResult<Student>> Create(Student student)
         {

@@ -25,6 +25,11 @@ namespace CrudMongoApp.Repositories
             return await _students.Find(student => student.Id == id).FirstOrDefaultAsync();
         }
 
+        public async Task<List<Student>> GetAllByCourseId(Guid courseId) 
+        {
+            return await _students.Find(student => student.CourseId == courseId).ToListAsync();
+        }
+
         public async Task CreateAsync(Student student)
         {
             student.Id = Guid.NewGuid();
