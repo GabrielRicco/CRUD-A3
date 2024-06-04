@@ -1,8 +1,6 @@
 using MongoDB.Driver;
 using Models;
 using Repositories;
-using Microsoft.Extensions.Options;
-using Config;
 
 namespace CrudMongoApp.Repositories
 {
