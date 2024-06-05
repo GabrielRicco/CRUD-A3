@@ -17,6 +17,8 @@ var mongoDatabase = mongoClient.GetDatabase(mongoDbSettings.DatabaseName);
 
 builder.Services.AddSingleton(mongoDatabase);
 
+builder.Services.AddAutoMapper(typeof(MappingProfile));
+
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ITokenService, TokenService>();

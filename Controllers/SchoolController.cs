@@ -26,7 +26,7 @@ namespace CrudMongoApp.Controllers
 
             if (student != null && course != null)
             {
-                student.Course = course;
+                student.CourseId = course.Id;
                 if (!course.Students.Contains(student))
                 {
                     course.Students.Add(student);

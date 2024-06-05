@@ -53,3 +53,5 @@ C:\Users\2045966\Desktop\CrudMongoApp\bin\Debug\net8.0\Microsoft.IdentityModel.P
 C:\Users\2045966\Desktop\CrudMongoApp\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\2045966\Desktop\CrudMongoApp\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\2045966\Desktop\CrudMongoApp\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\2045966\Desktop\CrudMongoApp\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\2045966\Desktop\CrudMongoApp\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

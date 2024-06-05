@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 using CrudMongoApp.Services;
 using Models;
 using Microsoft.AspNetCore.Authorization;
+using AutoMapper;
+using Dto;
 
 namespace CrudMongoApp.Controllers
 {
@@ -11,10 +13,12 @@ namespace CrudMongoApp.Controllers
     public class StudentsController : ControllerBase
     {
         private readonly IStudentService _studentService;
+        private readonly IMapper _mapper;
 
-        public StudentsController(IStudentService studentService)
+        public StudentsController(IStudentService studentService, IMapper mapper)
         {
             _studentService = studentService;
+            _mapper = mapper;
         }
 
         [HttpGet]
@@ -47,8 +51,12 @@ namespace CrudMongoApp.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Student>> Create(Student student)
+        public async Task<ActionResult<Student>> Create(StudentDto studentDto)
         {
+            var student = _mapper.Map<Student>(studentDto);
+            student.Id = Guid.NewGuid();
+            student.CourseId = null;
+            
             await _studentService.CreateAsync(student);
             return CreatedAtAction(nameof(GetById), new { id = student.Id }, student);
         }
