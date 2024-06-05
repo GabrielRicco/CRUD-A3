@@ -27,7 +27,7 @@ namespace CrudMongoApp.Controllers
             if (student != null && course != null)
             {
                 student.CourseId = course.Id;
-                if (!course.Students.Contains(student))
+                if (!course.Students!.Contains(student))
                 {
                     course.Students.Add(student);
                     await _studentService.UpdateAsync(studentId, student);
