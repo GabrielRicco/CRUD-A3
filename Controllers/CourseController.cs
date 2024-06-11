@@ -51,7 +51,7 @@ namespace CrudMongoApp.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(Guid id, Course course)
+        public async Task<IActionResult> Update(Guid id, CourseDto course)
         {
             var existingCourse = await _courseService.GetByIdAsync(id);
             if (existingCourse == null)
@@ -59,8 +59,9 @@ namespace CrudMongoApp.Controllers
                 return NotFound();
             }
 
-            course.Id = existingCourse.Id;
-            await _courseService.UpdateAsync(id, course);
+            existingCourse.Name = course.Name;
+            
+            await _courseService.UpdateAsync(id, existingCourse);
 
             return Ok("Estudante de id " + course.Id + " atualizado com sucesso!");
         }
