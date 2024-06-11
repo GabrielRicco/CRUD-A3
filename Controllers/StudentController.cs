@@ -70,6 +70,7 @@ namespace CrudMongoApp.Controllers
                 return NotFound();
             }
 
+            student.Id = existingStudent.Id;
             existingStudent.Name = student.Name;
 
             await _studentService.UpdateAsync(id, existingStudent);

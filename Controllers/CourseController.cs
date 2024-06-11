@@ -59,11 +59,12 @@ namespace CrudMongoApp.Controllers
                 return NotFound();
             }
 
+            course.Id = existingCourse.Id;
             existingCourse.Name = course.Name;
-            
+
             await _courseService.UpdateAsync(id, existingCourse);
 
-            return Ok("Estudante de id " + course.Id + " atualizado com sucesso!");
+            return Ok("Curso de id " + course.Id + " atualizado com sucesso!");
         }
 
         [HttpDelete("{id}")]
@@ -77,7 +78,7 @@ namespace CrudMongoApp.Controllers
 
             await _courseService.DeleteAsync(id);
 
-            return Ok("Estudante de id " + course.Id + " deletado com sucesso!");
+            return Ok("Curso de id " + course.Id + " deletado com sucesso!");
         }
     }
 }

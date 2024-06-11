@@ -22,7 +22,7 @@ public class AuthController : ControllerBase
         var token = _tokenService.GenerateToken(login);
         
         if(token ==  "")
-            return Unauthorized();
+            return Unauthorized("Você não tem autorização!");
 
         return Ok(token);
     }
