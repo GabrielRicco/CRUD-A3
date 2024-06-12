@@ -34,6 +34,10 @@ C# | .NET 8 | Swagger
 ### Banco de dados
 MySQL Server
 
+---
+
+## 🛠️ Instruções
+
 ### Backend
 Entrar na pasta *CrudMongoApp* e executar os seguintes comandos
 
