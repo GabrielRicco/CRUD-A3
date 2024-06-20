@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using CrudMongoApp.Services;
 using Microsoft.AspNetCore.Authorization;
+using Models;
 
 namespace CrudMongoApp.Controllers
 {
@@ -27,7 +28,12 @@ namespace CrudMongoApp.Controllers
             if (student != null && course != null)
             {
                 student.CourseId = course.Id;
-                if (!course.Students!.Contains(student))
+                // Verifique se course.Students é nulo e inicialize se necessário
+                if (course.Students == null)
+                {
+                    course.Students = [];
+                }
+                if (!course.Students.Contains(student))
                 {
                     course.Students.Add(student);
                     await _studentService.UpdateAsync(studentId, student);
