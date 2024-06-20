@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace CrudMongoApp.Controllers
 {
-    [Authorize(Roles = "admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase

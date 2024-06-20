@@ -1828,19 +1828,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\2045966\\.nuget\\packages\\": {}
+    "C:\\Users\\Gabriel Ricco\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\2045966\\Desktop\\CrudMongoApp\\CrudMongoApp.csproj",
+      "projectUniqueName": "C:\\Users\\Gabriel Ricco\\Desktop\\CRUD-A3\\CrudMongoApp.csproj",
       "projectName": "CrudMongoApp",
-      "projectPath": "C:\\Users\\2045966\\Desktop\\CrudMongoApp\\CrudMongoApp.csproj",
-      "packagesPath": "C:\\Users\\2045966\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\2045966\\Desktop\\CrudMongoApp\\obj\\",
+      "projectPath": "C:\\Users\\Gabriel Ricco\\Desktop\\CRUD-A3\\CrudMongoApp.csproj",
+      "packagesPath": "C:\\Users\\Gabriel Ricco\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Gabriel Ricco\\Desktop\\CRUD-A3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\2045966\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Gabriel Ricco\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -1917,7 +1917,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
